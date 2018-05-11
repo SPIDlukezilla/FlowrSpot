@@ -65,6 +65,7 @@ ADDED from C:\Users\luka.vrataric\projects\FlowrSpot\android\app\src\main\Androi
 		ADDED from C:\Users\luka.vrataric\projects\FlowrSpot\android\app\src\main\AndroidManifest.xml:23:17-81
 uses-sdk
 INJECTED from C:\Users\luka.vrataric\projects\FlowrSpot\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [FlowrSpot:react-native-vector-icons:unspecified] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\FlowrSpot\react-native-vector-icons\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.55.4] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
@@ -76,6 +77,7 @@ MERGED from [com.facebook.fresco:imagepipeline:1.3.0] C:\Users\luka.vrataric\pro
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.1.0] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\AndroidManifest.xml:2:3-70
+MERGED from [FlowrSpot:react-native-linear-gradient:unspecified] C:\Users\luka.vrataric\projects\FlowrSpot\android\app\build\intermediates\exploded-aar\FlowrSpot\react-native-linear-gradient\unspecified\AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		INJECTED from C:\Users\luka.vrataric\projects\FlowrSpot\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\luka.vrataric\projects\FlowrSpot\android\app\src\main\AndroidManifest.xml
