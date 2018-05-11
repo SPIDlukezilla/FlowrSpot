@@ -2,6 +2,11 @@
   "name": "FlowrSpot",
   "version": "0.1.0",
   "private": true,
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts"
+    ]
+  },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest": "^22.4.3",
