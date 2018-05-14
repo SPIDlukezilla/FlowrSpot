@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableNativeFeedback, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableNativeFeedback, ImageBackground, TouchableOpacity } from 'react-native';
 
 import MainText from '../UI/MainText/MainText';
 import HeadingText from '../UI/HeadingText/HeadingText';
-
-import FlowerImage from '../../assets/images/pl_image.png';
 
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';

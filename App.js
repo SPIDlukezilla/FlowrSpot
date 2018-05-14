@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView, Button, TextInput, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, ImageBackground, ScrollView, TextInput, TouchableOpacity, Image } from 'react-native';
 
 import HeadingText from './src/components/UI/HeadingText/HeadingText';
 import MainText from './src/components/UI/MainText/MainText';
-import DefaultInput from './src/components/UI/DefaultInput/DefaultInput';
-import TestList from './src/components/FlowerListItem/FlowerListItem';
 import NavHeader from './src/components/UI/NavHeader/NavHeader';
 import NavBar from './src/components/UI/NavBar/NavBar';
-import FlowerInput from './src/components/FlowerInput/FlowerInput';
 import FlowerList from './src/components/FlowersList/FlowersList';
 
 import backgroundImage from './src/assets/images/pl_hero.png';
-import FlowerImage from './src/assets/images/pl_image.png';
 
 import search_icon from './src/assets/icons/pl_icon_search.png';
 
@@ -71,7 +67,7 @@ class App extends Component {
   render() {
 
     let testView = (
-      <View style={{height: 143}}></View>
+      <View style={{ height: 143 }}></View>
     );
 
     if (this.state.flowersLoaded) {

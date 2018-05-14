@@ -1,9 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
 import Logo from '../../../assets/images/logo.png';
-import Menu from '../../../assets/icons/ellipsis-h.svg'
 
 const NavHeader = () => (
     <View style={styles.container}>

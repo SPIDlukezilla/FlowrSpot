@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import FavIcon from '../../../assets/icons/favorites_icons.png';
 import CommentIcon from '../../../assets/icons/comment_icon.png';
 import NewSightingIcon from '../../../assets/icons/new_sighting_icon.png';

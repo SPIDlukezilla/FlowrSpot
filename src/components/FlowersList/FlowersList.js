@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, ListView, View, Text, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 
 import FlowerListItem from '../FlowerListItem/FlowerListItem';
 import MainText from '../UI/MainText/MainText';
@@ -8,7 +8,6 @@ import HeaderText from '../UI/HeadingText/HeadingText'
 
 class FlowerList extends Component {
     render() {
-
         let lista = (
             <FlatList
                 numColumns={2}
