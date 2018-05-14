@@ -33,7 +33,7 @@ class FlowerListItem extends Component {
             <View style={styles.touchableView}>
                 <TouchableNativeFeedback onPress={() => { alert('Image pressed') }}>
                     <View style={styles.listItem}>
-                        <ImageBackground source={FlowerImage} style={styles.placeImage}>
+                        <ImageBackground source={this.props.flowerImage} style={styles.placeImage}>
                             <LinearGradient colors={['#00000000', 'rgba(0,0,0, 0.7)']} style={styles.linearGradient}>
                                 <View style={styles.favButtonView}>
                                     <TouchableOpacity style={styles.favButton} onPress={this.onFav}>
@@ -45,12 +45,12 @@ class FlowerListItem extends Component {
                                 <View style={styles.textContainer}>
                                     <View>
                                         <MainText>
-                                            <HeadingText style={styles.headingText}>Balloon Flower</HeadingText>
+                                            <HeadingText style={styles.headingText}>{this.props.flowerName}</HeadingText>
                                         </MainText>
                                     </View>
                                     <View style={styles.descriptionView}>
                                         <MainText>
-                                            <HeadingText style={styles.descriptionText}>Platycodon grandiflo</HeadingText>
+                                            <HeadingText style={styles.descriptionText}>{this.props.flowerLatin}</HeadingText>
                                         </MainText>
                                     </View>
                                     <View style={styles.sightingsView}>
@@ -74,14 +74,13 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         paddingTop: 97
-        // justifyContent: 'center',
     },
     listItem: {
         width: 160,
         backgroundColor: '#eee',
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start'
     },
     placeImage: {
         flex: 1,
@@ -93,7 +92,9 @@ const styles = StyleSheet.create({
         height: 203,
         width: 160,
         marginTop: 12,
-        borderRadius: 2.4
+        borderRadius: 2.4,
+        marginRight: 7,
+        marginLeft: 7
     },
     descriptionText: {
         fontSize: 9.6,
@@ -108,7 +109,6 @@ const styles = StyleSheet.create({
         paddingTop: 8
     },
     sightingsView: {
-        // flex: 0.24,
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 12,

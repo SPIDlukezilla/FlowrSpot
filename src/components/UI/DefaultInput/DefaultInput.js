@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-import search_icon from '../../../assets/icons/pl_icon_search.png'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import search_icon from '../../../assets/icons/pl_icon_search.png';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const defaultInput = props => (
-    <View style={styles.searchView}>
-        <TextInput
-            underlineColorAndroid='transparent'
-            {...props}
-            style={[styles.input, props.style, !props.valid && props.touched ? styles.invalid : null]}
-        />
-        <View style={styles.iconView} >
-            <TouchableOpacity style={styles.searchButton} onPress={() => alert('Search flower')}>
-                <View style={{paddingTop: 13}}>
-                    <Image source={search_icon} style={styles.searchIcon} />
+import { connect } from 'react-redux';
+import { searchFlower } from '../../../store/actions/index';
+
+
+class defaultInput extends Component {
+
+    state = {
+        flowerName: ''
+    }
+
+    constructor(props) {
+        super(props)
+    }
+
+    onSearch = (flowerName) => {
+        this.props.onSearchFlower(flowerName);
+    }
+
+    render() {
+        return (
+            <View style={styles.searchView}>
+                <TextInput
+                    underlineColorAndroid='transparent'
+                    {...this.props}
+                    style={[styles.input, this.props.style]}
+                />
+                <View style={styles.iconView} >
+                    <TouchableOpacity style={styles.searchButton} onPress={() => this.onSearch(this.props.value)}>
+                        <View style={{ paddingTop: 13 }}>
+                            <Image source={search_icon} style={styles.searchIcon} />
+                        </View>
+                    </TouchableOpacity>
                 </View>
-            </TouchableOpacity>
-        </View>
-    </View>
-);
+            </View>
+        )
+    }
+
+};
 
 const styles = StyleSheet.create({
     input: {
@@ -54,4 +76,16 @@ const styles = StyleSheet.create({
     }
 });
 
-export default defaultInput;
+const mapStateToProps = state => {
+    return {
+      flowerName: state.flowers.flowerName
+    };
+  };
+  
+  const mapDispatchToProps = dispatch => {
+    return {
+      onSearchFlower: (flowerName) => dispatch(searchFlower(flowerName))
+    }
+  };
+
+export default connect(mapStateToProps, mapDispatchToProps)(defaultInput);

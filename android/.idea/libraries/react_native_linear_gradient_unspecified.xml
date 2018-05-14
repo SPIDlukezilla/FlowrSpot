@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="react-native-linear-gradient-unspecified">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/FlowrSpot/react-native-linear-gradient/unspecified/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/FlowrSpot/react-native-linear-gradient/unspecified/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

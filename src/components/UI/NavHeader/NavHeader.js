@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     logo: {
-        height: 27,
+        height: 25,
         width: 151
     },
     menuView: {

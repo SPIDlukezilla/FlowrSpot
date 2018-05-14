@@ -7,10 +7,26 @@ import SightingListIcon from '../../../assets/icons/sighting_list_icon.png';
 
 const NavBar = () => (
     <View style={styles.container}>
-        <Image source={FavIcon} style={styles.favIcon} />
-        <Image source={CommentIcon} style={styles.favIcon} />
-        <Image source={NewSightingIcon} style={styles.favIcon} />
-        <Image source={SightingListIcon} style={styles.favIcon} />
+        <View style={styles.favButtonView}>
+            <TouchableOpacity style={styles.favButton} onPress={() => { alert('onFav') }}>
+                <Image source={FavIcon} style={styles.favIcon} />
+            </TouchableOpacity>
+        </View>
+        <View style={styles.favButtonView}>
+            <TouchableOpacity style={styles.favButton} onPress={() => { alert('onComment') }}>
+                <Image source={CommentIcon} style={styles.favIcon} />
+            </TouchableOpacity>
+        </View>
+        <View style={styles.favButtonView}>
+            <TouchableOpacity style={styles.favButton} onPress={() => { alert('onNewSighting') }}>
+                <Image source={NewSightingIcon} style={styles.favIcon} />
+            </TouchableOpacity>
+        </View>
+        <View style={styles.favButtonView}>
+            <TouchableOpacity style={styles.favButton} onPress={() => { alert('onSightingList') }}>
+                <Image source={SightingListIcon} style={styles.favIcon} />
+            </TouchableOpacity>
+        </View>
     </View>
 );
 
@@ -20,11 +36,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'center' 
+        alignItems: 'center'
     },
     favIcon: {
-        height: 32,
-        width: 32
+        height: 35,
+        width: 35
+    },
+    favButton: {
+        height: 35,
+        width: 40
+    },
+    favButtonView: {
+        height: 35,
+        width: 40
     }
 
 });
