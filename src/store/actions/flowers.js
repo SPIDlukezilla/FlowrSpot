@@ -27,7 +27,7 @@ export const searchFlower = (flowerName) => {
                 }
                 )
                 .then(parsedRes => {
-                    //console.log(parsedRes);
+                    console.log(parsedRes);
                     dispatch(startSearchFlower(flowerName, parsedRes))
                 })
                 .catch(err => console.log('ERROR: ' + err))

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     menuView: {
         left: 0,
         position: 'absolute',
-        paddingLeft: 22
+        paddingLeft: 22,
     },
     imageView: {
         alignItems: 'center',
@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     menuFirst: {
         position: 'absolute',
         left: 0,
-        //marginLeft: 20,
+        marginLeft: 22,
+        marginTop: 21,
         width: 5,
         height: 5,
         backgroundColor: '#949ea0',
@@ -56,7 +57,8 @@ const styles = StyleSheet.create({
     menuSecond: {
         position: 'absolute',
         left: 0,
-        marginLeft: 10,
+        marginLeft: 32,
+        marginTop: 21,
         width: 5,
         height: 5,
         backgroundColor: '#949ea0',
@@ -65,7 +67,8 @@ const styles = StyleSheet.create({
     menuThird: {
         position: 'absolute',
         left: 0,
-        marginLeft: 20,
+        marginLeft: 42,
+        marginTop: 21,
         width: 5,
         height: 5,
         backgroundColor: '#949ea0',
@@ -74,11 +77,15 @@ const styles = StyleSheet.create({
     menuButtonView: {
         position: 'absolute',
         left: 0,
-        paddingLeft: 22
+        paddingLeft: 22,
+        paddingTop: 21,
+        height: 45
     },
     menuButton: {
-        width: 25,
-        height: 5
+        position: 'absolute',
+        left: 0,
+        width: 50,
+        height: 45
     }
 });
 

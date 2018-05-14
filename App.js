@@ -33,16 +33,12 @@ class App extends Component {
   };
 
   componentWillMount() {
+    console.log(this.props.flowers);
     this.props.onLoadFlowers()
       .then(res => {
         this.setState({ flowersLoaded: true });
-        console.log(this.props.flowers)
+        console.log(this.props.flowers);
       });
-  };
-
-  flowerSearchHandler = () => {
-    // call the function for searching a flower
-    alert(this.state.searchFlower.flowerName);
   };
 
   flowerNameChangedHandler = val => {
@@ -57,19 +53,25 @@ class App extends Component {
   }
 
   onSearch = (flowerName) => {
-    //console.log(this.state.searchFlower.flowerName);
-    this.props.onSearchFlower(this.state.searchFlower.flowerName)
-    .then(res => {
-      console.log(this.props.flowers)
-    });
+    if (this.state.searchFlower.flowerName != '') {
+      this.props.onSearchFlower(this.state.searchFlower.flowerName)
+        .then(res => {
+          console.log(this.props.flowers)
+        });
+    } else {
+      this.props.onLoadFlowers()
+        .then(res => {
+          this.setState({ flowersLoaded: true });
+          console.log(this.props.flowers)
+        });
+    }
+
   }
-
-
 
   render() {
 
     let testView = (
-      <Text>{this.state.test}</Text>
+      <View style={{height: 143}}></View>
     );
 
     if (this.state.flowersLoaded) {
@@ -107,16 +109,9 @@ class App extends Component {
                   </MainText>
                 </View>
                 <View style={styles.inputContainer}>
-                  {/*  <FlowerInput
-                    style={styles.input}
-                    flowerData={this.state.searchFlower.flowerName}
-                    onChangeText={this.flowerNameChangedHandler}
-                  /> */}
-
                   <View style={styles.searchView}>
                     <TextInput
                       underlineColorAndroid='transparent'
-                      //{...this.props}
                       onChangeText={this.flowerNameChangedHandler}
                       placeholder={'Looking for something specific?'}
                       style={styles.input}
@@ -129,8 +124,6 @@ class App extends Component {
                       </TouchableOpacity>
                     </View>
                   </View>
-
-
                 </View>
               </View>
             </ImageBackground>
@@ -140,7 +133,7 @@ class App extends Component {
               {testView}
             </View>
           </View>
-          <View>
+          <View style={styles.navView}>
             <NavBar />
           </View>
         </View>
@@ -206,9 +199,6 @@ const styles = StyleSheet.create({
     marginRight: 6,
     marginBottom: 12
   },
-  /*  input: {
-     fontFamily: 'Ubuntu-Light'
-   }, */
   input: {
     width: '100%',
     height: 48,
@@ -239,6 +229,11 @@ const styles = StyleSheet.create({
   searchButton: {
     width: 41,
     height: 48
+  },
+  navView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignContent: 'flex-end'
   }
 });
 

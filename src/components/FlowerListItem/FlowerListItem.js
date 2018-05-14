@@ -31,7 +31,7 @@ class FlowerListItem extends Component {
     render() {
         return (
             <View style={styles.touchableView}>
-                <TouchableNativeFeedback onPress={() => { alert('Image pressed') }}>
+                <TouchableNativeFeedback onPress={() => { alert(this.props.flowerName) }}>
                     <View style={styles.listItem}>
                         <ImageBackground source={this.props.flowerImage} style={styles.placeImage}>
                             <LinearGradient colors={['#00000000', 'rgba(0,0,0, 0.7)']} style={styles.linearGradient}>
